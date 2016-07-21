@@ -34,7 +34,8 @@ class Mando(object):
     def set_temporizador(self, segundos):
         self.temporizador = segundos
 
-
+    def set_ventilador_on_off(self, on_off):
+        self.ventilador_on_off = on_off
 
     # manda todos los datos
     def logger(self):
@@ -47,8 +48,6 @@ if "__main__" == __name__:
     ventilador = Mando() # Instanciamos la clase Mando y llamamos al objeto "ventilador"
 
     # velocidad_actual = ventilador.get_velocidad()
-
-
     ventilador.logger()
     #ventilador.set_velocidad(34)
     #print ventilador.logger()
