@@ -39,10 +39,16 @@ class Ventilador(object):
 
     # manda todos los datos
     def logger(self):
-        print "Velocidad: "        + str(self.velocidad)
-        print "Temporizador: "     + str(self.temporizador)
-        print "Estado luz: "       + str(self.ventilador_on_off)
-        print "Estado ventilado: " + str(self.luz_on_off)
+        enter = "\n"
+
+        datos = "Velocidad: " + str(self.velocidad) + enter
+        datos += "Temporizador: " + str(self.temporizador) + enter
+        datos += "Estado luz: " + str(self.ventilador_on_off) + enter
+        datos += "Estado ventilador: " + str(self.luz_on_off)
+
+        return datos
+
+
 
 if "__main__" == __name__:
     ventilador = Mando() # Instanciamos la clase Mando y llamamos al objeto "ventilador"

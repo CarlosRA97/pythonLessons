@@ -14,3 +14,12 @@ class Luces(object):
 
     def set_luz_estado(self, on_off):
         self.luz_estado = on_off
+
+
+    def logger(self):
+        enter = "\n"
+        
+        datos = "Estado de luces: " + str(self.luz_estado) + enter
+        datos += "Potencia de luz: " + str(self.luz_potencia)
+        
+        return datos
