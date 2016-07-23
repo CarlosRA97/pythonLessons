@@ -5,11 +5,11 @@ class Ventilador(object):
     """
 
 
-    # Declaramos y inializamos la velocidad del ventilador
+    # Declaramos y inializamos las variables del ventilador
     velocidad = 0
     temporizador = 0
-    ventilador_on_off = False
-    luz_on_off = False
+    estado_ventilador = False
+    estado_luz = False
 
 
     ## Establecer  = set
@@ -19,23 +19,26 @@ class Ventilador(object):
     def get_velocidad(self):
         return self.velocidad
 
-    def set_velocidad(self, velocidad):
-        self.velocidad = velocidad
-
-    def get_estado_luz(self):
-        return self.luz_on_off
-
-    def set_estado_luz(self, on_off):
-        self.luz_on_off = on_off
-
     def get_temporizador(self):
         return self.temporizador
+
+    def get_estado_ventilador(self):
+        return self.estado_ventilador
+
+    def get_estado_luz(self):
+        return self.estado_luz
+
+    def set_velocidad(self, velocidad):
+        self.velocidad = velocidad
 
     def set_temporizador(self, segundos):
         self.temporizador = segundos
 
-    def set_ventilador_on_off(self, on_off):
-        self.ventilador_on_off = on_off
+    def set_estado_ventilador(self, on_off):
+        self.estado_ventilador = on_off
+
+    def set_estado_luz(self, on_off):
+        self.estado_luz = on_off
 
     # manda todos los datos
     def logger(self):
@@ -43,8 +46,8 @@ class Ventilador(object):
 
         datos = "Velocidad: " + str(self.velocidad) + enter
         datos += "Temporizador: " + str(self.temporizador) + enter
-        datos += "Estado luz: " + str(self.ventilador_on_off) + enter
-        datos += "Estado ventilador: " + str(self.luz_on_off)
+        datos += "Estado luz: " + str(self.estado_ventilador) + enter
+        datos += "Estado ventilador: " + str(self.estado_luz)
 
         return datos
 
